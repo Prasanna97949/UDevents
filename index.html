@@ -104,9 +104,29 @@
       <!-- Menu Links -->
       <ul class="hidden md:flex space-x-8 text-lg">
         <li><a href="#" class="text-white hover:text-yellow-400 transition">Home</a></li>
-        <li><a href="#about" class="text-white hover:text-yellow-400 transition">About Us</a></li>
-        <li><a href="#services" class="text-white hover:text-yellow-400 transition">Services</a></li>
-        <li><a href="#gallery" class="text-white hover:text-yellow-400 transition">Gallery</a></li>
+<!-- About Us Dropdown -->
+<li class="relative">
+  <button id="about-dropdown-btn" class="text-white hover:text-yellow-400 transition focus:outline-none">
+    About Us
+  </button>
+  <ul id="about-dropdown" class="absolute hidden bg-black bg-opacity-90 min-w-48 rounded-lg shadow-lg mt-2">
+    <li><a href="#team" class="block px-4 py-2 text-white hover:bg-gray-700">Our Team</a></li>
+    <li><a href="#mission" class="block px-4 py-2 text-white hover:bg-gray-700">Our Mission</a></li>
+    <li><a href="#vision" class="block px-4 py-2 text-white hover:bg-gray-700">Our Vision</a></li>
+  </ul>
+</li><!-- Services Dropdown -->
+<li class="relative">
+  <button id="services-dropdown-btn" class="text-white hover:text-yellow-400 transition focus:outline-none">
+    Services
+  </button>
+  <ul id="services-dropdown" class="absolute hidden bg-black bg-opacity-90 min-w-48 rounded-lg shadow-lg mt-2">
+    <li><a href="#web-development" class="block px-4 py-2 text-white hover:bg-gray-700">Web Development</a></li>
+    <li><a href="#digital-marketing" class="block px-4 py-2 text-white hover:bg-gray-700">Digital Marketing</a></li>
+    <li><a href="#product-photography" class="block px-4 py-2 text-white hover:bg-gray-700">Product Photography</a></li>
+    <li><a href="#ui-ux-design" class="block px-4 py-2 text-white hover:bg-gray-700">UI/UX Design</a></li>
+    <li><a href="#content-creation" class="block px-4 py-2 text-white hover:bg-gray-700">Content Creation</a></li>
+  </ul>
+</li>        <li><a href="#gallery" class="text-white hover:text-yellow-400 transition">Gallery</a></li>
         <li><a href="#contact" class="text-white hover:text-yellow-400 transition">Contact Us</a></li>
       </ul>
 
@@ -124,8 +144,29 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden bg-black bg-opacity-90 absolute w-full top-16 left-0 flex flex-col items-center space-y-6 py-8 z-40">
       <a href="#" class="text-white text-xl hover:text-yellow-400">Home</a>
-      <a href="#about" class="text-white text-xl hover:text-yellow-400">About Us</a>
-      <a href="#services" class="text-white text-xl hover:text-yellow-400">Services</a>
+      <div class="relative">
+        <button id="mobile-about-dropdown-btn" class="text-white text-xl hover:text-yellow-400 focus:outline-none">
+          About Us
+        </button>
+        <ul id="mobile-about-dropdown" class="mt-2 pl-4 hidden">
+          <li><a href="#team" class="block text-white hover:text-yellow-400">Our Team</a></li>
+          <li><a href="#mission" class="block text-white hover:text-yellow-400">Our Mission</a></li>
+          <li><a href="#vision" class="block text-white hover:text-yellow-400">Our Vision</a></li>
+        </ul>
+      </div>
+      <!-- Services Dropdown for Mobile -->
+      <div class="relative">
+        <button id="mobile-services-dropdown-btn" class="text-white text-xl hover:text-yellow-400 focus:outline-none">
+          Services
+        </button>
+        <ul id="mobile-services-dropdown" class="mt-2 pl-4 hidden">
+          <li><a href="#web-development" class="block text-white hover:text-yellow-400">Web Development</a></li>
+          <li><a href="#digital-marketing" class="block text-white hover:text-yellow-400">Digital Marketing</a></li>
+          <li><a href="#product-photography" class="block text-white hover:text-yellow-400">Product Photography</a></li>
+          <li><a href="#ui-ux-design" class="block text-white hover:text-yellow-400">UI/UX Design</a></li>
+          <li><a href="#content-creation" class="block text-white hover:text-yellow-400">Content Creation</a></li>
+        </ul>
+      </div>
       <a href="#gallery" class="text-white text-xl hover:text-yellow-400">Gallery</a>
       <a href="#contact" class="text-white text-xl hover:text-yellow-400">Contact Us</a>
     </div>
