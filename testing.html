@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .tab-btn {
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            font-weight: 600;
+            color: #4b5563;
+        }
+        .tab-btn.active {
+            color: #2563eb;
+        }
+        .tab-btn.active::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 4px;
+            background: #2563eb;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+        .tab-content {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: all 0.4s ease-in-out;
+            display: none;
+        }
+        .tab-content.active {
+            opacity: 1;
+            transform: translateY(0);
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="container mx-auto px-4 py-10">
+        <h2 class="text-center text-3xl font-bold mb-6 text-blue-600">Our Services</h2>
+        
+        <!-- Tab Navigation -->
+        <div class="flex justify-center space-x-4 border-b-2 border-gray-300">
+            <button class="tab-btn px-6 py-3 focus:outline-none active" data-target="web">Web Development</button>
+            <button class="tab-btn px-6 py-3 focus:outline-none" data-target="mobile">Mobile App</button>
+            <button class="tab-btn px-6 py-3 focus:outline-none" data-target="seo">SEO</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="mt-8 p-6 bg-white shadow-lg rounded-lg transition-all duration-300">
+            <div class="tab-content active" id="web">
+                <h4 class="text-xl font-semibold text-blue-600">Web Development</h4>
+                <p class="text-gray-600 mt-2">We provide modern and responsive website development solutions tailored to your business needs.</p>
+            </div>
+            <div class="tab-content" id="mobile">
+                <h4 class="text-xl font-semibold text-blue-600">Mobile App Development</h4>
+                <p class="text-gray-600 mt-2">We build high-performance mobile applications for both Android and iOS platforms.</p>
+            </div>
+            <div class="tab-content" id="seo">
+                <h4 class="text-xl font-semibold text-blue-600">SEO Optimization</h4>
+                <p class="text-gray-600 mt-2">Boost your online presence with our expert SEO services to rank higher in search engines.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab Switching Logic
+        const tabs = document.querySelectorAll(".tab-btn");
+        const contents = document.querySelectorAll(".tab-content");
+
+        function activateTab(tab) {
+            // Remove active class from all tabs
+            tabs.forEach(t => t.classList.remove("active"));
+            // Add active class to clicked tab
+            tab.classList.add("active");
+
+            // Hide all content
+            contents.forEach(content => content.classList.remove("active"));
+            // Show the selected content
+            document.getElementById(tab.dataset.target).classList.add("active");
+        }
+
+        // Default: Activate first tab
+        activateTab(document.querySelector(".tab-btn.active"));
+
+        // Add click event to all tabs
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => activateTab(tab));
+        });
+    </script>
+
+</body>
+</html>
