@@ -50,3 +50,37 @@ faqButtons.forEach((btn) => {
     icon.textContent = content.classList.contains('hidden') ? '+' : '-';
   });
 });
+
+// Toggle mobile menu
+
+
+
+// Function to close all dropdowns
+function closeAllDropdowns() {
+  const dropdowns = document.querySelectorAll('[id$="-dropdown"]');
+  dropdowns.forEach(dropdown => {
+    dropdown.classList.add('hidden');
+  });
+}
+
+// Toggle dropdowns in desktop and mobile views
+const dropdownButtons = document.querySelectorAll('[id$="-dropdown-btn"]');
+dropdownButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const dropdownId = button.id.replace('-btn', '');
+    const dropdown = document.getElementById(dropdownId);
+
+    // Close all dropdowns first
+    closeAllDropdowns();
+
+    // Toggle the clicked dropdown
+    dropdown.classList.toggle('hidden');
+  });
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', (event) => {
+  if (!event.target.matches('[id$="-dropdown-btn"]')) {
+    closeAllDropdowns();
+  }
+});
