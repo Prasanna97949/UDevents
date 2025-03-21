@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD Events</title>
+    <link rel="icon" type="image/x-icon"  href="./images/LOGO.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Navbar transition on scroll */
+      .navbar {
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+      }
+      .navbar.scrolled {
+        background: rgba(0, 0, 0, 0.9);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+    /* Slider Container */
+    .slider-container {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Slider Wrapper */
+    .slider {
+      display: flex;
+      transition: transform 0.8s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      height: 100vh;
+    }
+
+    /* Zoom on Hover */
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Top Layer */
+    .overlay {
+      padding-left: 10vh;
+      padding-right: 5vh;
+      position: absolute;
+      inset: 0;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: left;
+      text-align: left;
+      pointer-events: none;
+    }
+
+    .overlay h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .overlay p {
+      font-size: 1.2rem;
+      margin: 15px 0;
+    }
+
+    </style>
+</head>
+<body class="bg-[#005A80]" >
+  <!-- Navbar -->
+<header class="fixed w-full z-50">
+  <nav class="navbar flex items-center justify-between px-6 py-4 lg:px-16 transition-all duration-300">
+    <div class="flex items-center space-x-4">
+      <img src="./Images/LOGO.png" alt="Logo" class="w-12 h-12"> 
+      <span class="text-white text-2xl font-bold">UD Events</span>
+    </div>
+
+    <!-- Menu Links -->
+    <ul class="hidden md:flex space-x-8 text-lg">
+      <li><a href="#" class="text-white hover:text-yellow-400 transition">Home</a></li>
+      <li><a href="#about" class="text-white hover:text-yellow-400 transition">About Us</a></li>
+      <li><a href="#services" class="text-white hover:text-yellow-400 transition">Services</a></li>
+      <li><a href="#gallery" class="text-white hover:text-yellow-400 transition">Gallery</a></li>
+      <li><a href="#contact" class="text-white hover:text-yellow-400 transition">Contact Us</a></li>
+    </ul>
+
+    <div class=" hidden md:flex items-center gap-2 ">
+      <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
+      <p class="text-white" >+91  73977 57225</p>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-white text-2xl">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden bg-black bg-opacity-90 absolute w-full top-16 left-0 flex flex-col items-center space-y-6 py-8 z-40">
+    <a href="#" class="text-white text-xl hover:text-yellow-400">Home</a>
+    <a href="#about" class="text-white text-xl hover:text-yellow-400">About Us</a>
+    <a href="#services" class="text-white text-xl hover:text-yellow-400">Services</a>
+    <a href="#gallery" class="text-white text-xl hover:text-yellow-400">Gallery</a>
+    <a href="#contact" class="text-white text-xl hover:text-yellow-400">Contact Us</a>
+  </div>
+</header>
+
+<!-- Slider Section -->
+<div class="slider-container">
+
+  <!-- Top Layer (Fixed) -->
+  <div class="overlay">
+    <h1>EVENTS & ENTERTAINMENT</h1>
+    <p>We Design Your Perfect Day, Because In Your Dreams Every Detail Matters</p>
+    <div class="flex justify-left items-left gap-6 p-4  rounded-lg">
+      <a href="#" class="text-white text-3xl" style="transition: color 0.3s;" onmouseover="this.style.color='#3b82f6'" onmouseout="this.style.color='white'">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="#" class="text-white text-3xl" style="transition: color 0.3s;" onmouseover="this.style.color='#3b82f6'" onmouseout="this.style.color='white'">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#" class="text-white text-3xl" style="transition: color 0.3s;" onmouseover="this.style.color='#3b82f6'" onmouseout="this.style.color='white'">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="#" class="text-white text-3xl" style="transition: color 0.3s;" onmouseover="this.style.color='#3b82f6'" onmouseout="this.style.color='white'">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+    <div class="flex justify-left mt-3 items-left">
+      <button class="px-6 py-1 bg-blue-600 text-white font-semibold rounded-xl shadow-md transition-transform duration-300 hover:scale-105 hover:bg-blue-700">
+        Contact Us
+      </button>
+    </div>
+  </div>
+
+  <!-- Image Slider -->
+  <div class="slider" id="slider">
+    <div class="slide"><img src="./Images/s1.webp" alt="Event 1"></div>
+    <div class="slide"><img src="./Images/s2.webp" alt="Event 2"></div>
+    <div class="slide"><img src="./Images/s3.webp" alt="Event 3"></div>
+    <div class="slide"><img src="./Images/s4.webp" alt="Event 4"></div>
+    <div class="slide"><img src="./Images/s5.webp" alt="Event 5"></div>
+  </div>
+
+</div>
+
+
+
+<script src="./index.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
