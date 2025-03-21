@@ -37,3 +37,4 @@ function moveSlide() {
 setInterval(() => {
   moveSlide();
 }, 3000);
+
