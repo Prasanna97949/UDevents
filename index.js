@@ -51,7 +51,29 @@ faqButtons.forEach((btn) => {
   });
 });
 
-// Toggle mobile menu
+  // Tab Switching Logic
+  const tabs = document.querySelectorAll(".tab-btn");
+  const contents = document.querySelectorAll(".tab-content");
+
+  function activateTab(tab) {
+      // Remove active class from all tabs
+      tabs.forEach(t => t.classList.remove("active"));
+      // Add active class to clicked tab
+      tab.classList.add("active");
+
+      // Hide all content
+      contents.forEach(content => content.classList.remove("active"));
+      // Show the selected content
+      document.getElementById(tab.dataset.target).classList.add("active");
+  }
+
+  // Default: Activate first tab
+  activateTab(document.querySelector(".tab-btn.active"));
+
+  // Add click event to all tabs
+  tabs.forEach(tab => {
+      tab.addEventListener("click", () => activateTab(tab));
+  });
 
 
 
