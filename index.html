@@ -8,7 +8,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -91,9 +90,43 @@
         font-size: 1.2rem;
         margin: 15px 0;
       }
+     
+        .tab-btn {
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            font-weight: 600;
+            color: #4b5563;
+        }
+        .tab-btn.active {
+            color: #2563eb;
+        }
+        .tab-btn.active::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 4px;
+            background: #2563eb;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+        .tab-content {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: all 0.4s ease-in-out;
+            display: none;
+        }
+        .tab-content.active {
+            opacity: 1;
+            transform: translateY(0);
+            display: block;
+        }
+   
     </style>
 </head>
-<body class="bg-[#005A80]">
+<body class="bg-gray-100" >
   <!-- Navbar -->
   <header class="fixed w-full z-50">
     <nav class="navbar flex items-center justify-between px-6 py-4 lg:px-16 transition-all duration-300">
@@ -181,7 +214,8 @@
   <div class="slider-container">
     <!-- Top Layer (Fixed) -->
     <div class="overlay">
-      <h1>EVENTS & ENTERTAINMENT</h1>
+
+      <h1>UD<br>EVENTS & ENTERTAINMENT</h1>
       <p>We Design Your Perfect Day, Because In Your Dreams Every Detail Matters</p>
       <div class="social-icons flex justify-left items-left gap-6 p-4 rounded-lg">
         <a href="#" class="text-white text-3xl" style="transition: color 0.3s;" onmouseover="this.style.color='#3b82f6'" onmouseout="this.style.color='white'">
@@ -215,620 +249,520 @@
   </div>
   <!-- mission and vision -->
    <div class="mt-10 text-center">
-    <h1 class="text-white mt-3 font-bold text-3xl">Event Management Services Across Tamil Nadu</h1>
-    <h3 class="text-red-300 mt-3 font-semibold text-xl" >Where imagination meets reality and events become unforgettable.</h3>
-    <div class="md:flex justify-center items-center p-5 gap-6 " >
-      <div class="bg-white flex flex-col gap-6 p-5 rounded-md shadow-xl mt-3 ">
-        <h1 class="text-blue-600 mt-5 font-bold text-3xl">Our Mission</h1>
-      <p class="text-black ">To transform event concepts into unforgettable experiences, 
-        exceeding client expectations through meticulous planning, seamless execution,
-        and personalized service, ensuring every event is a resounding success.</p>
-      </div>
-      <div class="bg-white flex flex-col gap-6 p-5 rounded-md shadow-xl mt-3 " >
-        <h1 class="text-blue-600 mt-5 font-bold text-3xl">Our Vision</h1>
-      <p class="text-black ">To be recognized as the premier event management company, 
-        known for our innovative approach, unwavering commitment to quality, 
-        and ability to create bespoke events that leave a lasting positive 
-        impact on both clients and attendees.</p>
-      </div>
-    </div>
+    <h1 class="text-[#A2010D] mt-3 font-bold text-3xl">Event Management Services Across Tamil Nadu</h1>
+    <h3 class="text-[#BD8F40] mt-3 font-semibold text-xl" >Where imagination meets reality and events become unforgettable.</h3>
+    
    </div>
+   <section>
+    <section id="abt" class="py-16 bg-gray-100">
+      <div class="container mx-auto px-6 flex flex-wrap items-center">
+    
+        <!-- Left Column (Text) -->
+        <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
+          <div class="animate__animated animate__fadeIn">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-6">Our Mission and Vision</h2>
+            <p class="text-lg text-gray-600 mb-4">To transform event concepts into unforgettable experiences, 
+              exceeding client expectations through meticulous planning, seamless execution,
+              and personalized service, ensuring every event is a resounding success.</p>
+             <p class="text-lg text-gray-600">To be recognized as the premier event management company, known for our innovative approach, unwavering commitment to quality, and ability to create bespoke events that leave a lasting positive impact on both clients and attendees.</p> 
+          </div>
+        </div>
+    
+        <!-- Right Column (Video) -->
+       
+        <div class="w-full md:w-1/2 px-4">
+          <div class="relative">
+            <div class="bg-cover bg-center h-64 md:h-96 rounded-lg" style="background-image: url('https://eventsmanagementkerala.com/wp-content/uploads/2024/11/ECP01217-scaled.jpg');">
+              <a href="https://youtu.be/hTor-Ed8e50" class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 hover:bg-opacity-75 rounded-lg">
+                <i class="eicon-play text-white text-4xl"></i>
+                <span class="sr-only">Play Video about Event Management Company in Kerala, India</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+      
+        
+        
+        
+        
+        
+    
+      </div>
+      
+    </section>
+    
+   </section>
    <!-- our services-->
-   <div class="course-tabs">
-    <h2 class="text-4xl font-bold text-center text-white mb-12">Our Services</h2>
-    <ul class="nav nav-tabs" id="myTab" >
-      <li class="active">
-        <a href="#wedding" data-toggle="tab" >Wedding</a>
-      </li>
-    <li><a data-toggle="tab" href="#puberty"></a>Puberty</li>
-    <li><a data-toggle="tab" href="#marriage"></a>Marriage</li>
-    <li><a data-toggle="tab" href="#reception"></a>Reception</li>
-    <li><a data-toggle="tab" href="#corporate"></a>Corporate</li>
-    <li><a data-toggle="tab" href="#house"></a>Housewarming</li>
-    <li><a data-toggle="tab" href="#event"></a>Events</li>
-
-    </ul>
-   <div class="tab-content container">
-   <div class="tab-pane fade active in" id="wedding">
-    <ul class="course-topics row">
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-  
-    </ul>
-   </div>
-   <div class="tab-pane fade active in" id="puberty">
-    <ul class="course-topics row">
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-  
-    </ul>
-   </div>
-   <div class="tab-pane fade active in" id="marriage">
-    <ul class="course-topics row">
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-  
-    </ul>
-   </div>
-   <div class="tab-pane fade active in" id="reception">
-    <ul class="course-topics row">
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-  
-    </ul>
-   </div>
-   <div class="tab-pane fade active in" id="corporate">
-    <ul class="course-topics row">
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-  
-    </ul>
-   </div>
-   <div class="tab-pane fade active in" id="house">
-    <ul class="course-topics row">
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-  
-    </ul>
-   </div>
-   <div class="tab-pane fade active in" id="event">
-    <ul class="course-topics row">
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumb">
-          <a href="#"><img src="Images/LOGO.png" alt="" width="133" height="133"></a>
-
-        </div>
-        <div class="text">
-          <h4>wedding</h4>
-          <p>We make you to enjoy the event by our entertainments.</p>
-
-        </div>
-      </li>
-  
-    </ul>
-   </div>
-      </div>
-
-   </div>
-
-   <!-- our promise -->
-   <section class=" py-16">
-    <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center text-white mb-12">Our Promise</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-
-            <!-- Card 1 -->
-            <div class="bg-white flex flex-col justify-center items-center rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
-                <img src="./Images/Quality.png" alt="Quality" class="w-32 h-32 object-cover">
-                <div class="p-6">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Unmatched Quality</h3>
-                    <p class="text-gray-600">We deliver events with precision and perfection, ensuring every detail reflects excellence.
-                      Our team upholds the highest standards, creating flawless and memorable experiences.
-                      From concept to execution, we prioritize quality in every aspect of our service.
-                      With us, you can expect nothing less than exceptional and seamless events. </p>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="bg-white flex flex-col justify-center items-center rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
-                <img src="./Images/trust.png" alt="Reliability" class="w-36 h-36 object-cover">
-                <div class="p-6">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Reliability</h3>
-                    <p class="text-gray-600">Count on us to deliver events that run smoothly and efficiently, every time.
-                      We prioritize punctuality, precision, and flawless execution.
-                      Our dedicated team ensures that every promise is kept without compromise.
-                      With us, you can relax, knowing your event is in trustworthy hands. </p>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="bg-white flex flex-col justify-center items-center rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
-                <img src="./Images/customer.png" alt="Customer Satisfaction" class="w-36 h-36 object-cover">
-                <div class="p-6">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Customer Satisfaction</h3>
-                    <p class="text-gray-600">We prioritize your happiness, making your vision our mission.
-                      Our team goes the extra mile to exceed your expectations.
-                      Every detail is tailored to reflect your unique preferences.
-                      Your satisfaction is our ultimate reward. </p>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="bg-white flex flex-col justify-center items-center rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
-                <img src="./Images/specialist.png" alt="Innovation" class="w-36 h-36 object-cover">
-                <div class="p-6">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Top Class Specialist</h3>
-                    <p class="text-gray-600">Our team of seasoned experts brings creativity and precision.
-                      We specialize in delivering flawless and memorable events.
-                      From planning to execution, we ensure perfection at every step.
-                      Trust our specialists to turn your dreams into reality.</p>
-                </div>
-            </div>
-
-        </div>
+    <section>
+   <div class="container mx-auto px-4 py-10">
+    <h2 class="text-center text-3xl font-bold mb-6 text-blue-600">Our Services</h2>
+    
+    <!-- Tab Navigation -->
+    <div class="md:flex justify-center space-x-4 border-b-2 border-gray-300">
+        <button class="tab-btn text-[#A2010D]  px-6 py-3 focus:outline-none active" data-target="birthday">Birthday Party</button>
+        <button class="tab-btn text-[#A2010D] px-6 py-3 focus:outline-none" data-target="marriage">Marriage</button>
+        <button class="tab-btn text-[#A2010D] px-6 py-3 focus:outline-none" data-target="reception">Reception</button>
+        <button class="tab-btn text-[#A2010D] px-6 py-3 focus:outline-none" data-target="house">Housewarming</button>
+        <button class="tab-btn text-[#A2010D] px-6 py-3 focus:outline-none" data-target="puberty">Puberty Function</button>
+        <button class="tab-btn text-[#A2010D] px-6 py-3 focus:outline-none" data-target="event">Stage Events</button>
+        <button class="tab-btn text-[#A2010D] px-6 py-3 focus:outline-none" data-target="decoration">Decoration</button>
     </div>
+
+    <!-- Tab Content -->
+  
+    <div class="mt-8 p-6 bg-white shadow-lg rounded-lg transition-all duration-300">
+      <div class="tab-content active" id="birthday">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 p-5">
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/kids-ents-page-image1.jpg" alt="ENTERTAINMENT"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">ENTERTAINMENT</h1>
+              <p class="text-black text-sm break-words">We make you enjoy the event with our entertainment.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/cake.jpeg" alt="Cake Arrangement"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Cake Arrangement</h1>
+              <p class="text-black text-sm break-words">We arrange delicious and theme-based birthday cakes.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/balloon.webp" alt="Balloon Decoration"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Balloon Decoration</h1>
+              <p class="text-black text-sm break-words">Decorate your event with colorful balloons.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/photo.webp" alt="Photo & Video Shoot"
+              class="w-[133px] h-[133px]   object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Photo & Video Shoot</h1>
+              <p class="text-black text-sm break-words">Capture beautiful moments with our photography services.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/gift.jpg" alt="Goody Bags/ Gifts"
+              class="w-[133px] h-[133px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Goody Bags/ Gifts</h1>
+              <p class="text-black text-sm break-words">Give cheerful gifts to your guests.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/food.jpg" alt="Food Supply"
+              class="w-[133px] h-[133px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Food Supply</h1>
+              <p class="text-black text-sm break-words">Enjoy a multi-cuisine menu at your event.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-content active" id="marriage">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 p-5">
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/kids-ents-page-image1.jpg" alt="ENTERTAINMENT"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">ENTERTAINMENT</h1>
+              <p class="text-black text-sm break-words">We make you enjoy the event with our entertainment.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/cake.jpeg" alt="Cake Arrangement"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Cake Arrangement</h1>
+              <p class="text-black text-sm break-words">We arrange delicious and theme-based birthday cakes.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/balloon.webp" alt="Balloon Decoration"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Balloon Decoration</h1>
+              <p class="text-black text-sm break-words">Decorate your event with colorful balloons.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/photo.webp" alt="Photo & Video Shoot"
+              class="w-[133px] h-[133px]   object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Photo & Video Shoot</h1>
+              <p class="text-black text-sm break-words">Capture beautiful moments with our photography services.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/gift.jpg" alt="Goody Bags/ Gifts"
+              class="w-[133px] h-[133px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Goody Bags/ Gifts</h1>
+              <p class="text-black text-sm break-words">Give cheerful gifts to your guests.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/food.jpg" alt="Food Supply"
+              class="w-[133px] h-[133px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Food Supply</h1>
+              <p class="text-black text-sm break-words">Enjoy a multi-cuisine menu at your event.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-content active" id="reception">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 p-5">
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/kids-ents-page-image1.jpg" alt="ENTERTAINMENT"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">ENTERTAINMENT</h1>
+              <p class="text-black text-sm break-words">We make you enjoy the event with our entertainment.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/cake.jpeg" alt="Cake Arrangement"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Cake Arrangement</h1>
+              <p class="text-black text-sm break-words">We arrange delicious and theme-based birthday cakes.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/balloon.webp" alt="Balloon Decoration"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Balloon Decoration</h1>
+              <p class="text-black text-sm break-words">Decorate your event with colorful balloons.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/photo.webp" alt="Photo & Video Shoot"
+              class="w-[133px] h-[133px]   object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Photo & Video Shoot</h1>
+              <p class="text-black text-sm break-words">Capture beautiful moments with our photography services.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/gift.jpg" alt="Goody Bags/ Gifts"
+              class="w-[133px] h-[133px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Goody Bags/ Gifts</h1>
+              <p class="text-black text-sm break-words">Give cheerful gifts to your guests.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/food.jpg" alt="Food Supply"
+              class="w-[133px] h-[133px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Food Supply</h1>
+              <p class="text-black text-sm break-words">Enjoy a multi-cuisine menu at your event.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-content active" id="house">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 p-5">
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/kids-ents-page-image1.jpg" alt="ENTERTAINMENT"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">ENTERTAINMENT</h1>
+              <p class="text-black text-sm break-words">We make you enjoy the event with our entertainment.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/cake.jpeg" alt="Cake Arrangement"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Cake Arrangement</h1>
+              <p class="text-black text-sm break-words">We arrange delicious and theme-based birthday cakes.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/balloon.webp" alt="Balloon Decoration"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Balloon Decoration</h1>
+              <p class="text-black text-sm break-words">Decorate your event with colorful balloons.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/photo.webp" alt="Photo & Video Shoot"
+              class="w-[133px] h-[133px]   object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Photo & Video Shoot</h1>
+              <p class="text-black text-sm break-words">Capture beautiful moments with our photography services.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/gift.jpg" alt="Goody Bags/ Gifts"
+              class="w-[133px] h-[133px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Goody Bags/ Gifts</h1>
+              <p class="text-black text-sm break-words">Give cheerful gifts to your guests.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/food.jpg" alt="Food Supply"
+              class="w-[133px] h-[133px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Food Supply</h1>
+              <p class="text-black text-sm break-words">Enjoy a multi-cuisine menu at your event.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-content active" id="puberty">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 p-5">
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/kids-ents-page-image1.jpg" alt="ENTERTAINMENT"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">ENTERTAINMENT</h1>
+              <p class="text-black text-sm break-words">We make you enjoy the event with our entertainment.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/cake.jpeg" alt="Cake Arrangement"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Cake Arrangement</h1>
+              <p class="text-black text-sm break-words">We arrange delicious and theme-based birthday cakes.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/balloon.webp" alt="Balloon Decoration"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Balloon Decoration</h1>
+              <p class="text-black text-sm break-words">Decorate your event with colorful balloons.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/photo.webp" alt="Photo & Video Shoot"
+              class="w-[133px] h-[133px]   object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Photo & Video Shoot</h1>
+              <p class="text-black text-sm break-words">Capture beautiful moments with our photography services.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/gift.jpg" alt="Goody Bags/ Gifts"
+              class="w-[133px] h-[133px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Goody Bags/ Gifts</h1>
+              <p class="text-black text-sm break-words">Give cheerful gifts to your guests.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/food.jpg" alt="Food Supply"
+              class="w-[133px] h-[133px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Food Supply</h1>
+              <p class="text-black text-sm break-words">Enjoy a multi-cuisine menu at your event.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-content active" id="event">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 p-5">
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/kids-ents-page-image1.jpg" alt="ENTERTAINMENT"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">ENTERTAINMENT</h1>
+              <p class="text-black text-sm break-words">We make you enjoy the event with our entertainment.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/cake.jpeg" alt="Cake Arrangement"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Cake Arrangement</h1>
+              <p class="text-black text-sm break-words">We arrange delicious and theme-based birthday cakes.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/balloon.webp" alt="Balloon Decoration"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Balloon Decoration</h1>
+              <p class="text-black text-sm break-words">Decorate your event with colorful balloons.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/photo.webp" alt="Photo & Video Shoot"
+              class="w-[133px] h-[133px]   object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Photo & Video Shoot</h1>
+              <p class="text-black text-sm break-words">Capture beautiful moments with our photography services.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/gift.jpg" alt="Goody Bags/ Gifts"
+              class="w-[133px] h-[133px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Goody Bags/ Gifts</h1>
+              <p class="text-black text-sm break-words">Give cheerful gifts to your guests.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/food.jpg" alt="Food Supply"
+              class="w-[133px] h-[133px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Food Supply</h1>
+              <p class="text-black text-sm break-words">Enjoy a multi-cuisine menu at your event.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-content active" id="decoration">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 p-5">
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/kids-ents-page-image1.jpg" alt="ENTERTAINMENT"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">ENTERTAINMENT</h1>
+              <p class="text-black text-sm break-words">We make you enjoy the event with our entertainment.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/cake.jpeg" alt="Cake Arrangement"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Cake Arrangement</h1>
+              <p class="text-black text-sm break-words">We arrange delicious and theme-based birthday cakes.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/balloon.webp" alt="Balloon Decoration"
+              class="w-[100px] h-[100px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Balloon Decoration</h1>
+              <p class="text-black text-sm break-words">Decorate your event with colorful balloons.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/photo.webp" alt="Photo & Video Shoot"
+              class="w-[133px] h-[133px]   object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Photo & Video Shoot</h1>
+              <p class="text-black text-sm break-words">Capture beautiful moments with our photography services.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/gift.jpg" alt="Goody Bags/ Gifts"
+              class="w-[133px] h-[133px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Goody Bags/ Gifts</h1>
+              <p class="text-black text-sm break-words">Give cheerful gifts to your guests.</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center bg-white gap-4 p-4 h-full min-h-[250px] rounded-lg shadow-md overflow-hidden">
+            <img src="./Images/food.jpg" alt="Food Supply"
+              class="w-[133px] h-[133px] object-cover rounded-full transition-transform duration-300 ease-in-out hover:rounded-none">
+            <div class="text-center">
+              <h1 class="text-black font-semibold">Food Supply</h1>
+              <p class="text-black text-sm break-words">Enjoy a multi-cuisine menu at your event.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+  </div>
 </section>
 
-<!-- FAQ -->
- <div class=" min-h-screen flex items-center justify-center" >
-  <div class="max-w-4xl w-full  rounded-lg p-8">
-    <h2 class="text-3xl font-bold text-center text-white mb-6">Frequently Asked Questions</h2>
+   <!-- our promise -->
+   <section class="py-16 bg-[#191919]">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-white mb-12">Our Promise</h2>
   
-    <!-- FAQ Item -->
-    <div class="space-y-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+  
+        <!-- Card 1 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 ease-in-out hover:scale-110 hover:bg-gradient-to-r from-blue-300 to-green-300 group">
+          <div class="flex justify-center p-6 bg-gray-100">
+            <img src="./Images/Quality.png" alt="Quality" class="w-32 h-32 object-cover transform transition-transform duration-300 group-hover:rotate-12">
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Unmatched Quality</h3>
+            <p class="text-gray-600">We deliver events with precision and perfection, ensuring every detail reflects excellence. Our team upholds the highest standards, creating flawless and memorable experiences.</p>
+          </div>
+        </div>
+  
+        <!-- Card 2 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 ease-in-out hover:scale-110 hover:bg-gradient-to-r from-purple-300 to-red-300 group">
+          <div class="flex justify-center p-6 bg-gray-100">
+            <img src="./Images/trust.png" alt="Reliability" class="w-36 h-36 object-cover transform transition-transform duration-300 group-hover:rotate-12">
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Reliability</h3>
+            <p class="text-gray-600">Count on us to deliver events that run smoothly and efficiently, every time. Our dedicated team ensures that every promise is kept without compromise.</p>
+          </div>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 ease-in-out hover:scale-110 hover:bg-gradient-to-r from-yellow-300 to-red-500 group">
+          <div class="flex justify-center p-6 bg-gray-100">
+            <img src="./Images/customer.png" alt="Customer Satisfaction" class="w-36 h-36 object-cover transform transition-transform duration-300 group-hover:rotate-12">
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Customer Satisfaction</h3>
+            <p class="text-gray-600">We prioritize your happiness, making your vision our mission. Our team goes the extra mile to exceed your expectations and tailor every detail to your preferences.</p>
+          </div>
+        </div>
+  
+        <!-- Card 4 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 ease-in-out hover:scale-110 hover:bg-gradient-to-r from-teal-300 to-blue-500 group">
+          <div class="flex justify-center p-6 bg-gray-100">
+            <img src="./Images/specialist.png" alt="Innovation" class="w-36 h-36 object-cover transform transition-transform duration-300 group-hover:rotate-12">
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Top Class Specialist</h3>
+            <p class="text-gray-600">Our team of seasoned experts brings creativity and precision. Trust our specialists to turn your dreams into reality and ensure perfection at every step.</p>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+
+<!-- FAQ -->
+
+
+
+<div class="min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('./Images/s1.webp');">
+  <div class="max-w-4xl w-full bg-opacity-50 bg-black p-8 rounded-lg">
+    <h2 class="text-3xl font-bold text-center text-white mb-6">Frequently Asked Questions</h2>
+    
+    <!-- FAQ Items (split into two columns) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
       <!-- FAQ Question 1 -->
-      <div class="border-b-2 border-gray-200">
+      <div class="faq-item border-b-2 border-gray-200">
         <button class="faq-btn w-full flex justify-between items-center py-4 px-4 text-left text-white hover:bg-gray-50 hover:text-black focus:outline-none">
-          <span class="text-lg font-medium ">What services do you offer?</span>
-          <span class="faq-icon text-2xl font-bold text-gray-400 hover:text-black ">+</span>
+          <span class="text-lg font-medium">What services do you offer?</span>
+          <span class="faq-icon text-2xl font-bold text-gray-400 hover:text-black">+</span>
         </button>
         <div class="faq-content hidden px-4 pb-4 text-white">
           We provide end-to-end event management services, including planning, coordination, and execution.
         </div>
       </div>
-  
+
       <!-- FAQ Question 2 -->
-      <div class="border-b-2 border-gray-200">
+      <div class="faq-item border-b-2 border-gray-200">
         <button class="faq-btn w-full flex justify-between items-center py-4 px-4 text-left text-white hover:bg-gray-50 hover:text-black focus:outline-none">
           <span class="text-lg font-medium">How early should I book my event?</span>
           <span class="faq-icon text-2xl font-bold text-gray-400 hover:text-black">+</span>
@@ -837,89 +771,89 @@
           We recommend booking at least 3-6 months in advance to ensure availability and proper planning.
         </div>
       </div>
-  
+
       <!-- FAQ Question 3 -->
-      <div class="border-b-2 border-gray-200">
+      <div class="faq-item border-b-2 border-gray-200">
         <button class="faq-btn w-full flex justify-between items-center py-4 px-4 text-left text-white hover:bg-gray-50 hover:text-black focus:outline-none">
           <span class="text-lg font-medium">Do you provide customized event packages?</span>
-          <span class="faq-icon text-2xl font-bold hover:text-black text-gray-500">+</span>
+          <span class="faq-icon text-2xl font-bold text-gray-400 hover:text-black">+</span>
         </button>
         <div class="faq-content hidden px-4 pb-4 text-white">
           Yes, we tailor packages based on your specific needs and preferences.
         </div>
       </div>
-  
+
       <!-- FAQ Question 4 -->
-      <div class="border-b-2 border-gray-200">
+      <div class="faq-item border-b-2 border-gray-200">
         <button class="faq-btn w-full flex justify-between items-center py-4 px-4 text-left text-white hover:bg-gray-50 hover:text-black focus:outline-none">
           <span class="text-lg font-medium">Can you handle both small and large-scale events?</span>
-          <span class="faq-icon text-2xl font-bold hover:text-black text-gray-500">+</span>
+          <span class="faq-icon text-2xl font-bold text-gray-400 hover:text-black">+</span>
         </button>
         <div class="faq-content hidden px-4 pb-4 text-white">
           Absolutely! We manage events of all sizes, from intimate gatherings to large corporate functions.
         </div>
       </div>
-  
+
       <!-- FAQ Question 5 -->
-      <div class="border-b-2 border-gray-200">
+      <div class="faq-item border-b-2 border-gray-200">
         <button class="faq-btn w-full flex justify-between items-center py-4 px-4 text-left text-white hover:bg-gray-50 hover:text-black focus:outline-none">
           <span class="text-lg font-medium">Do you offer on-site event coordination?</span>
-          <span class="faq-icon text-2xl font-bold hover:text-black text-gray-500">+</span>
+          <span class="faq-icon text-2xl font-bold text-gray-400 hover:text-black">+</span>
         </button>
         <div class="faq-content hidden px-4 pb-4 text-white">
           Yes, our team ensures smooth execution and coordination throughout the event.
         </div>
       </div>
-  
+
       <!-- FAQ Question 6 -->
-      <div class="border-b-2 border-gray-200">
+      <div class="faq-item border-b-2 border-gray-200">
         <button class="faq-btn w-full flex justify-between items-center py-4 px-4 text-left text-white hover:bg-gray-50 hover:text-black focus:outline-none">
           <span class="text-lg font-medium">What payment methods do you accept?</span>
-          <span class="faq-icon text-2xl font-bold hover:text-black text-gray-500">+</span>
+          <span class="faq-icon text-2xl font-bold text-gray-400 hover:text-black">+</span>
         </button>
         <div class="faq-content hidden px-4 pb-4 text-white">
           We accept credit/debit cards, bank transfers, and UPI payments.
         </div>
       </div>
-  
+
       <!-- FAQ Question 7 -->
-      <div class="border-b-2 border-gray-200">
+      <div class="faq-item border-b-2 border-gray-200">
         <button class="faq-btn w-full flex justify-between items-center py-4 px-4 text-left text-white hover:bg-gray-50 hover:text-black focus:outline-none">
           <span class="text-lg font-medium">Do you manage destination events?</span>
-          <span class="faq-icon text-2xl font-bold hover:text-black text-gray-500">+</span>
+          <span class="faq-icon text-2xl font-bold text-gray-400 hover:text-black">+</span>
         </button>
         <div class="faq-content hidden px-4 pb-4 text-white">
           Yes, we specialize in destination events, including travel and logistics arrangements.
         </div>
       </div>
-  
+      
       <!-- FAQ Question 8 -->
-      <div class="border-b-2 border-gray-200">
+      <div class="faq-item border-b-2 border-gray-200">
         <button class="faq-btn w-full flex justify-between items-center py-4 px-4 text-left text-white hover:bg-gray-50 hover:text-black focus:outline-none">
           <span class="text-lg font-medium">Do you provide event decor services?</span>
-          <span class="faq-icon text-2xl font-bold hover:text-black text-gray-500">+</span>
+          <span class="faq-icon text-2xl font-bold text-gray-400 hover:text-black">+</span>
         </button>
         <div class="faq-content hidden px-4 pb-4 text-white">
           Yes, we offer creative decor solutions tailored to your event theme.
         </div>
       </div>
-  
+      
       <!-- FAQ Question 9 -->
-      <div class="border-b-2 border-gray-200">
+      <div class="faq-item border-b-2 border-gray-200">
         <button class="faq-btn w-full flex justify-between items-center py-4 px-4 text-left text-white hover:bg-gray-50 hover:text-black focus:outline-none">
           <span class="text-lg font-medium">Do you offer virtual event planning?</span>
-          <span class="faq-icon text-2xl font-bold hover:text-black text-gray-500">+</span>
+          <span class="faq-icon text-2xl font-bold text-gray-400 hover:text-black">+</span>
         </button>
         <div class="faq-content hidden px-4 pb-4 text-white">
           Yes, we provide full support for virtual and hybrid events.
         </div>
       </div>
-  
+
       <!-- FAQ Question 10 -->
-      <div class="border-b-2 border-gray-200">
+      <div class="faq-item border-b-2 border-gray-200">
         <button class="faq-btn w-full flex justify-between items-center py-4 px-4 text-left text-white hover:bg-gray-50 hover:text-black focus:outline-none">
           <span class="text-lg font-medium">How do I contact you for inquiries?</span>
-          <span class="faq-icon text-2xl font-bold hover:text-black text-gray-500">+</span>
+          <span class="faq-icon text-2xl font-bold text-gray-400 hover:text-black">+</span>
         </button>
         <div class="faq-content hidden px-4 pb-4 text-white">
           You can reach us via phone, email, or our contact form on the website.
@@ -927,8 +861,12 @@
       </div>
     </div>
   </div>
-  
- </div>
+</div>
+
+
+
+
+
   
 
   <script src="./index.js"></script>
@@ -936,6 +874,5 @@
   <script>
     AOS.init();
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
